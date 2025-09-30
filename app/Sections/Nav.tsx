@@ -9,7 +9,7 @@ const Nav = () => {
       <Link href={"/"}>
         <div className='flex items-center gap-x-3'>
           <Image src="/logo.jpeg" alt='logo' width={60} height={80} />
-          <h2 className='text-[#003D29] font-bold text-3xl hidden md:block'>Bags of Blessings</h2>
+          <h2 className='text-[#242529] font-bold text-3xl hidden md:block'>Bags of Blessings</h2>
         </div>
       </Link>
       <div className="w-[40%] relative">

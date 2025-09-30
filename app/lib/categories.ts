@@ -6,21 +6,23 @@ export type Category = {
   slug: string;
 };
 
+export type ProductCategory = "_drinks_" | "_frozen-food_" | "_snackbar_" | "cakes-cookies" | "candy-bar" | "meat-poultry-sea-food" | "_breakfast-lunch_"
+
 export const categories: Category[] = [
   {
     categoryName: "Drinks",
     image: "/categoryImages/DrinksImage.png",
-    slug: "drinks",
+    slug: "_drinks_",
   },
   {
     categoryName: "Frozen Food",
     image: "/categoryImages/FrozenFoodImage.png",
-    slug: "frozen-food",
+    slug: "_frozen-food_",
   },
   {
     categoryName: "Snack Bar",
     image: "/categoryImages/SnackBarImage.png",
-    slug: "snackbar",
+    slug: "_snackbar_",
   },
   {
     categoryName: "Cakes & Cookies",
@@ -40,9 +42,17 @@ export const categories: Category[] = [
   {
     categoryName: "Breakfast & Lunch",
     image: "/categoryImages/BreakfastLunchImage.png",
-    slug: "breakfast-lunch",
+    slug: "_breakfast-lunch_",
   },
 ];
 
-export const getCategoryBySlug = (slug: string) =>
+export const getCategoryBySlug = (slug: ProductCategory) =>
   categories.find((c) => c.slug === slug);
+
+export const getCategoryNameBySlug = (slug: ProductCategory) => {
+  const category = categories.find((c) => c.slug === slug)
+  if (!category) {
+    return console.log("No category found");
+  }
+  return category.categoryName;
+}

@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 const Category = () => {
   const autoplay = useRef(
@@ -40,7 +41,9 @@ const Category = () => {
               key={category.slug}
               className="md:basis-1/2 lg:basis-1/4"
             >
-              <CategoryCard category={category} />
+              <Link href={`/category/${category.slug}`}>
+                <CategoryCard category={category} />
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -1,3 +1,5 @@
+import Link from "next/link"
+import { getProductsByCategory, products } from "../lib/products"
 import ProductCard from "./ProductCard"
 
 const Product = () => {
@@ -7,12 +9,11 @@ const Product = () => {
         Featured Products
       </h1>
       <div className="grid gap-6 grid-cols-3 md:grid-cols-4 lg:grid-cols-6 max-w-md md:max-w-none mx-auto">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.map((product, index) => (
+          <Link href={`/product/${product.slug}`} key={index}>
+            <ProductCard product={product} />
+          </Link>
+        ))}
       </div>
     </section>
   )

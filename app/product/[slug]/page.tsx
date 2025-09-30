@@ -1,18 +1,30 @@
+
+import { getProductBySlug } from "@/app/lib/products"
 import Feature from "@/app/Sections/Feature"
 import Product from "@/app/Sections/Product"
-import { Handbag, ShoppingBag, Truck } from "lucide-react"
+import { ShoppingBag, Truck } from "lucide-react"
 import Image from "next/image"
 
-const page = () => {
+type ProductSlugParams = {
+  params: {
+    slug: string
+  }
+}
+
+const page = ({ params }: ProductSlugParams) => {
+  const product = getProductBySlug(params.slug);
+  if (!product) {
+    return <h1>No product found</h1>
+  }
   return (
     <section>
       <Feature />
       <div className="py-20 section-padding flex items-start gap-12">
         <div className="flex-1">
-          <Image src={"/banner.webp"} alt="product" width={500} height={500} />
+          <Image src={`${product.image}`} alt="product" width={500} height={500} />
         </div>
         <div className="flex-1">
-          <h2 className="text-[#343538] font-bold text-2xl">Fresh Produce</h2>
+          <h2 className="text-[#343538] font-bold text-2xl">{product.name}</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quia dolores pariatur quod, officiis natus libero quo, beatae doloremque commodi perspiciatis optio incidunt! Eveniet illum maxime amet beatae totam ducimus.</p>
           <div className="flex justify-between border border-gray-200 p-6 mt-6 rounded-2xl">
             <div className="text-center flex flex-col items-center">
