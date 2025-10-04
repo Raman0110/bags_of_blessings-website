@@ -2,6 +2,7 @@
 
 import Banner from "./Sections/Banner";
 import Category from "./Sections/Category";
+import Faq from "./Sections/Faq";
 import Product from "./Sections/Product";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <Category />
       <Product />
+      <Faq />
     </>
   );
 }

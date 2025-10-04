@@ -3,19 +3,17 @@
 @custom-variant dark (&:is(.dark *));
 
 
-html,
-body {
-  font-family: var(--font-nunito), ui-sans-serif, system-ui, -apple-system,
-    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
-    "Segoe UI Emoji";
-  height: 100%;
+html {
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-heading), var(--font-nunito), ui-sans-serif, system-ui;
+  font-weight: 900;
+  /* Montserrat Black */
 }
+
 
 /* Variables */
 :root {

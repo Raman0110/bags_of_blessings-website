@@ -26,7 +26,7 @@ const Category = () => {
 
   return (
     <section className="section-padding py-16">
-      <h1 className="max-md:px-8 text-3xl font-semibold mb-10 text-[#242529]">
+      <h1 className="max-md:px-8 text-3xl font-semibold mb-10 text-[#EC1A1C]">
         Shop what’s popular near you
       </h1>
 

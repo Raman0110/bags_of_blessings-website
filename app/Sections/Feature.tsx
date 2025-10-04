@@ -4,8 +4,8 @@ import React from 'react'
 const Feature = ({ categoryName = undefined }: { categoryName?: string }) => {
   if (categoryName) {
     return (
-      <div className="w-full text-left bg-[#FCFADE] h-[8rem] flex  items-center px-4 rounded-lg">
-        <h1 className='text-5xl text-[#242529] font-bold'>{categoryName}</h1>
+      <div className="w-full text-left bg-[#FCFADE] h-[8rem] flex  items-center px-6 rounded-lg">
+        <h1 className='text-4xl text-[#242529] font-bold'>{categoryName}</h1>
       </div>
     )
   } else {

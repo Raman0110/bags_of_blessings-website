@@ -3,21 +3,19 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Nav from "./Sections/Nav";
 
-const nunito = Montserrat({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '600', '700'], // choose what you need
-  variable: '--font-nunito',
+  weight: ['400', '600', '700', '900'], // 900 = Black
+  variable: '--font-montserrat',
 });
-
 
 export const metadata: Metadata = {
   title: "Bags of Blessings",
   description: 'Fresh groceries delivered to you',
   icons: {
-    icon: "/logo.jpeg"
-  }
+    icon: "/logo.jpeg",
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${nunito.variable}`}>
+    <html lang="en" className={`${montserrat.variable}`}>
       <body>
         <Nav />
         {children}

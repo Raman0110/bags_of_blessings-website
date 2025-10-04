@@ -1,33 +1,71 @@
-import Image from "next/image"
+"use client";
 
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Banner = () => {
-  return (
-    <main className="min-h-[85vh] section-padding bg-[#FAF1E5] flex flex-col-reverse lg:flex-row justify-between items-center gap-8 lg:gap-12 py-8 lg:py-0">
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-      <div className="flex-1 max-w-lg text-center lg:text-left">
-        <h2 className="heading font-bold text-[#242529] leading-tight">
-          Grocery delivery
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const progress = Math.min(scrollPosition / (windowHeight * 0.2), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const vanTranslateX = scrollProgress * -100;
+  const rightTextOpacity = scrollProgress;
+  const leftTextOpacity = 1 - scrollProgress;
+
+  return (
+    <main className="min-h-[80vh] bg-[#EC1A1C] flex items-center justify-between px-14 pb-10 relative overflow-hidden">
+      {/* Left text */}
+      <div
+        className="flex-1 transition-opacity duration-300 pointer-events-none z-10"
+        style={{ opacity: leftTextOpacity }}
+      >
+        <h2 className="font-montserrat font-black text-3xl sm:text-4xl lg:text-6xl text-white leading-snug mt-2">
+          Bags Of Blessings <br className="hidden sm:block" /> Mobile Grocery
         </h2>
-        <h2 className="heading font-bold text-[#242529] leading-tight">
-          near me
-        </h2>
-        <p className="pt-4 sm:pt-6 text-base sm:text-lg text-[#666] max-w-md mx-auto lg:mx-0">
-          Ready in as little as 1 hour
+        <p className="italic mt-6 text-2xl font-semibold text-[#242529]">
+          " Delivering Blessings 2 U "
         </p>
       </div>
-      <div className="flex-1">
+
+      {/* Van */}
+      <div
+        className="flex-1 -mt-12 transition-transform duration-300"
+        style={{ transform: `translateX(${vanTranslateX}%)` }}
+      >
         <Image
-          src="/banner.webp"
-          alt="banner-image"
-          className="object-contain"
+          src="/banner.png"
+          alt="Banner image showing groceries"
+          className="object-contain w-full h-auto"
           priority
-          width={600}
-          height={600}
+          width={900}
+          height={900}
         />
       </div>
-    </main>
-  )
-}
 
-export default Banner
+      {/* Right text */}
+      <div
+        className="absolute right-14 text-right transition-opacity duration-300 pointer-events-none z-10"
+        style={{ opacity: rightTextOpacity }}
+      >
+        <h2 className="font-montserrat font-black text-3xl sm:text-4xl lg:text-6xl text-white leading-snug mt-2">
+          Fresh Groceries <br className="hidden sm:block" /> At Your Doorstep
+        </h2>
+        <p className="italic mt-6 text-2xl font-semibold text-[#242529] max-w-md ml-auto">
+          " Quality products delivered fresh "
+        </p>
+      </div>
+    </main>
+  );
+};
+
+export default Banner;
