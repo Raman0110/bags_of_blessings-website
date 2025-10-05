@@ -8,8 +8,8 @@ import { faqs } from "../lib/faq"
 
 const Faq = () => {
   return (
-    <div className="section-padding">
-      <h1 className="max-md:px-8 text-3xl font-semibold mt-8 mb-6 text-[#EC1A1C]">
+    <section className="section-padding py-6">
+      <h1 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
         Frequently asked questions
       </h1>
       <Accordion type="single" collapsible>
@@ -22,7 +22,7 @@ const Faq = () => {
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+    </section>
   )
 }
 

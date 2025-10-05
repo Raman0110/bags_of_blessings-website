@@ -55,7 +55,7 @@ h3 {
 
 @layer utilities {
   .section-padding {
-    @apply sm:px-12 lg:px-24 xl:px-32 2xl:px-48;
+    @apply px-10 sm:px-12 lg:px-24 xl:px-32 2xl:px-48;
   }
 
   .heading {

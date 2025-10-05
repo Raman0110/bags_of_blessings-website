@@ -3,7 +3,7 @@ import { Product } from "../lib/products"
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <div className="cursor-pointer w-52 h-64 p-4 bg-white flex flex-col items-center justify-between rounded-xl border border-gray-200">
+    <div className="cursor-pointer h-48 sm:w-52 sm:h-64 p-4 bg-white flex flex-col items-center justify-between rounded-xl border border-gray-200">
       <Image
         src={product.image}
         alt={product.name}

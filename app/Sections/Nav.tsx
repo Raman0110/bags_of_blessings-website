@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 const Nav = () => {
   return (
-    <nav className='bg-white px-12 pt-6 pb-4 flex justify-between items-center sticky top-0 z-50'>
+    <nav className='bg-white px-4 sm:px-12 pt-6 pb-4 flex justify-between items-center sticky top-0 z-50'>
       <Link href={"/"}>
         <div className='flex items-center gap-x-3'>
           <Image src="/logo.jpeg" alt='logo' width={60} height={80} />
-          <h2 className='text-[#242529] font-bold text-2xl hidden md:block'>Bags of Blessings</h2>
+          {/* <h2 className='text-[#242529] font-bold text-2xl hidden md:block'>Bags of Blessings</h2> */}
         </div>
       </Link>
       {/* <div className="w-[40%] relative">

@@ -24,8 +24,8 @@ const Product = () => {
   if (featured.length === 0) return null; // loading state
 
   return (
-    <section className="section-padding pb-6">
-      <h1 className="max-md:px-8 text-3xl font-semibold mb-10 text-[#EC1A1C]">
+    <section className="section-padding py-6">
+      <h1 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
         Featured Products
       </h1>
       <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 max-w-md md:max-w-none mx-auto">
