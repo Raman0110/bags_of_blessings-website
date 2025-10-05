@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import { Input } from "@/components/ui/input"
-import { SearchIcon } from 'lucide-react'
 import Link from 'next/link'
 
 const Nav = () => {

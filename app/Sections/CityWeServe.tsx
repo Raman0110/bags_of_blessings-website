@@ -40,7 +40,7 @@ const CitiesWeServe = () => {
 
               <div className="mt-8 p-4 bg-[#FCFADE] rounded-xl border-l-4 border-[#EC1A1C]">
                 <p className="text-sm sm:text-base text-[#343538]">
-                  <span className="font-bold">Don't see your city?</span> Contact
+                  <span className="font-bold">Don&apos;t see your city?</span> Contact
                   us to check if we deliver to your area!
                 </p>
               </div>

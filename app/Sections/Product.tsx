@@ -5,8 +5,10 @@ import Link from "next/link";
 import { products } from "../lib/products";
 import ProductCard from "./ProductCard";
 
+type ProductType = typeof products[number];
+
 const Product = () => {
-  const [featured, setFeatured] = useState<any[]>([]);
+  const [featured, setFeatured] = useState<ProductType[]>([]);
 
   useEffect(() => {
     const stored = localStorage.getItem("featuredProducts");

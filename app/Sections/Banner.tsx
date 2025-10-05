@@ -34,7 +34,7 @@ const Banner = () => {
             Bags Of Blessings <br /> Mobile Grocery
           </h2>
           <p className="italic mt-6 text-2xl font-semibold text-[#242529]">
-            " Delivering Blessings 2 U "
+            Delivering Blessings 2 U
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@ const Banner = () => {
           Fresh Groceries <br className="hidden sm:block" /> At Your Doorstep
         </h2>
         <p className="italic mt-4 sm:mt-6 text-lg sm:text-2xl font-semibold text-[#242529] max-w-[200px] sm:max-w-md ml-auto">
-          " Quality products delivered fresh "
+          Quality products delivered fresh
         </p>
       </div>
     </main>
