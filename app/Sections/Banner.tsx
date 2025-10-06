@@ -16,7 +16,7 @@ const Banner = () => {
           {" "}Mobile Grocery
         </h1>
         <p className="sm:text-lg sm:font-semibold text-[#242529] my-4 sm:my-5">
-          5-Star Rated on Google – See Why Our Clients Rage & Review Us After Trying Our Hot Sauce!
+          5-Star Rated on Google – See Why Our Clients Rage & Review Us After Trying Our Fresh Products!
         </p>
         <div className="bg-white flex items-center gap-x-4 p-4 rounded-md max-w-[14rem]">
           <Image
