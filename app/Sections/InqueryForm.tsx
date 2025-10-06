@@ -11,10 +11,13 @@ export default function InqueryForm() {
     message: ''
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value,
     });
   };
 
@@ -31,12 +34,12 @@ export default function InqueryForm() {
           <div className="p-8 md:p-12 bg-yellow-300">
             <h1 className="text-4xl md:text-5xl font-black text-red-600 mb-4 leading-tight">
               Fresh Grocery
-              <br />at your doorstep.
+              <br />at your doorstep
             </h1>
 
             <p className="text-gray-800 text-sm mb-6 font-medium">
-              We are here to help.
-              Have a question, need assistance, or want to request our mobile grocery service? Fill out the form below, and our team will get back to you soon. Your convenience is our priority,
+              We are here to help
+              Have a question, need assistance, or want to request our mobile grocery service? Fill out the form below, and our team will get back to you soon Your convenience is our priority,
 
             </p>
 
