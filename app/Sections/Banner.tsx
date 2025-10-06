@@ -1,71 +1,59 @@
 "use client";
 
+import { Star } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Banner = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const progress = Math.min(scrollPosition / (windowHeight * 0.2), 1);
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const vanTranslateX = scrollProgress * -100;
-  const rightTextOpacity = scrollProgress;
-  const leftTextOpacity = 1 - scrollProgress;
 
   return (
-    <main className="min-h-[40vh] sm:min-h-[80vh] bg-white flex items-center justify-between px-4 sm:px-8 md:px-14 pb-10 relative overflow-hidden">
-      {/* Left text - Hidden on mobile */}
-      <div
-        className="hidden md:flex flex-1 transition-opacity duration-300 pointer-events-none z-10"
-        style={{ opacity: leftTextOpacity }}
-      >
-        <div>
-          <h2 className="font-montserrat font-black text-3xl lg:text-6xl text-[#EC1A1C] leading-snug mt-2">
-            Bags Of Blessings <br /> Mobile Grocery
-          </h2>
-          <p className="italic mt-6 text-2xl font-semibold text-[#242529]">
-            Delivering Blessings 2 U
-          </p>
+    <main className=" min-h-[40vh] sm:min-h-[80vh] flex flex-col-reverse lg:flex-row items-center gap-8 justify-start section-padding overflow-hidden">
+
+      <div className="w-full lg:w-[45%] z-20 text-left">
+        <h1 className="font-montserrat font-black text-xl sm:text-3xl lg:text-5xl text-[#EC1A1C] leading-tight">
+          Bags Of Blessings
+          <br className="hidden lg:block" />
+          {" "}Mobile Grocery
+        </h1>
+        <p className="sm:text-lg sm:font-semibold text-[#242529] my-4 sm:my-5">
+          5-Star Rated on Google – See Why Our Clients Rage & Review Us After Trying Our Hot Sauce!
+        </p>
+        <div className="bg-white flex items-center gap-x-4 p-4 rounded-md max-w-[14rem]">
+          <Image
+            src={"/google.webp"}
+            alt="google logo"
+            className="w-8 h-8 sm:w-10 sm:h-10"
+            width={40}
+            height={40}
+          />
+          <div>
+
+            <div className="flex">
+              <Star className="text-yellow-300" fill="#FFD230" size="20px" />
+              <Star className="text-yellow-300" fill="#FFD230" size="20px" />
+              <Star className="text-yellow-300" fill="#FFD230" size="20px" />
+              <Star className="text-yellow-300" fill="#FFD230" size="20px" />
+              <Star className="text-yellow-300" fill="#FFD230" size="20px" />
+            </div>
+            <Link href={"https://share.google/ojew8juKijCyoRhRY"} target="blank">
+              <p className="text-sm text-[#7D7D7D] font-semibold hover:underline">See all our reviews</p>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Van - Full width on mobile, flex-1 on desktop */}
-      <div
-        className="w-full md:flex-1 -mt-12 transition-transform duration-300"
-        style={{ transform: `translateX(${vanTranslateX}%)` }}
-      >
+      <div className="w-full lg:w-[60%]">
         <Image
           src="/van.png"
           alt="Banner image showing groceries"
-          className="object-contain w-full h-auto"
+          className="object-contain w-4xl min-h-76 sm:min-h-96 opacity-80"
           priority
-          width={900}
-          height={900}
+          width={700}
+          height={700}
         />
       </div>
 
-      {/* Right text - Fades in on scroll for both mobile and desktop */}
-      <div
-        className="absolute right-4 sm:right-8 md:right-14 text-right transition-opacity duration-300 pointer-events-none z-10"
-        style={{ opacity: rightTextOpacity }}
-      >
-        <h2 className="font-montserrat font-black text-2xl sm:text-3xl lg:text-6xl text-[#EC1A1C] leading-snug mt-2">
-          Fresh Groceries <br className="hidden sm:block" /> At Your Doorstep
-        </h2>
-        <p className="italic mt-4 sm:mt-6 text-lg sm:text-2xl font-semibold text-[#242529] max-w-[200px] sm:max-w-md ml-auto">
-          Quality products delivered fresh
-        </p>
-      </div>
+
     </main>
   );
 };

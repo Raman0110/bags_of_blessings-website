@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import CategoryCard from "./CategoryCard";
 
 // Category type definition
 type Category = {
@@ -22,22 +23,7 @@ type Category = {
 };
 
 // CategoryCard Component
-const CategoryCard = ({ category }: { category: Category }) => {
-  return (
-    <div className="py-2 sm:py-3 px-3 sm:px-4 rounded-xl gap-x-2 sm:gap-x-4 lg:gap-x-6 flex items-center justify-between min-w-[10rem] sm:min-w-[12rem] bg-[#F6F7F8] hover:underline cursor-pointer transition-transform hover:scale-105">
-      <p className="ml-1 sm:ml-2 text-sm sm:text-base text-[#343538] font-medium sm:font-semibold">
-        {category.categoryName}
-      </p>
-      <Image
-        src={category.image}
-        alt={category.categoryName}
-        width={40}
-        height={40}
-        className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0"
-      />
-    </div>
-  );
-};
+
 
 // Category Section Component
 const Category = () => {
