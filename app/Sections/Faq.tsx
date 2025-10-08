@@ -9,7 +9,7 @@ import { faqs } from "../lib/faq"
 const Faq = () => {
   return (
     <section className="section-padding py-6">
-      <h1 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
+      <h1 className="text-2xl sm:text-4xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
         Frequently asked questions
       </h1>
       <Accordion type="single" collapsible>

@@ -11,7 +11,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         height={140}
         className="object-contain"
       />
-      <p className="text-[#343538] text-center line-clamp-2">
+      <p className="text-[#343538] text-center line-clamp-2 text-xl">
         {product.name}
       </p>
     </div>

@@ -7,7 +7,7 @@ import Link from "next/link";
 const Banner = () => {
 
   return (
-    <main className=" min-h-[40vh] sm:min-h-[80vh] flex flex-col-reverse lg:flex-row items-center gap-8 justify-start section-padding overflow-hidden">
+    <main className=" min-h-[40vh] sm:min-h-[80vh] flex flex-col-reverse lg:flex-row items-center gap-8 justify-start section-padding overflow-hidden ">
 
       <div className="w-full lg:w-[45%] z-20 text-left">
         <h1 className="font-montserrat font-black text-xl sm:text-3xl lg:text-5xl text-[#EC1A1C] leading-tight">
@@ -46,7 +46,7 @@ const Banner = () => {
         <Image
           src="/van.png"
           alt="Banner image showing groceries"
-          className="object-contain w-4xl min-h-76 sm:min-h-96 opacity-80"
+          className="object-contain w-4xl min-h-76 sm:min-h-96"
           priority
           width={700}
           height={700}

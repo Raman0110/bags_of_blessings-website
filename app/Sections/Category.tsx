@@ -21,10 +21,6 @@ type Category = {
   image: string;
 };
 
-// CategoryCard Component
-
-
-// Category Section Component
 const Category = () => {
   const autoplay = useRef(
     Autoplay({
@@ -37,8 +33,8 @@ const Category = () => {
 
   return (
     <section className="section-padding py-6 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-14">
-      <h1 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
-        Shop what&apos;s popular near you
+      <h1 className="text-2xl sm:text-4xl font-semibold mb-6 sm:mb-8 md:mb-10 text-[#1D2030]">
+        Browse Our Hottest Categories
       </h1>
 
 
