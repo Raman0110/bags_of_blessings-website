@@ -4,7 +4,7 @@ const BlogLike = () => {
   const features = [
     {
       image: "/grocery-1.jpg",
-      title: "Wide Selection at Your Fingertips",
+      title: "Wide Selection",
       subtitle: "Explore a wide range of fresh groceries, meats, snacks, and drinks.",
       description:
         "From fresh produce and quality meats to your favorite snacks and beverages, we stock everything you need for your household.",
@@ -46,14 +46,14 @@ const BlogLike = () => {
             </div>
 
             {/* Content */}
-            <div className="bg-gray-100 p-4 h-62 md:h-75 rounded-b-lg">
-              <h3 className="text-md sm:text-xl font-bold text-[#EC1A1C]">
+            <div className="bg-gray-100 p-4 h-60 sm:h-50 rounded-b-lg">
+              <h3 className="text-md sm:text-lg font-bold text-[#343538]">
                 {feature.title}
               </h3>
-              <h4 className="text-sm sm:text-lg font-semibold text-[#343538] my-2 md:my-4">
+              <h4 className="text-sm font-semibold sm:text-md text-[#343538] my-2">
                 {feature.subtitle}
               </h4>
-              <p className="text-sm sm:text-base text-[#343538] leading-relaxed">
+              <p className="text-sm text-[#343538] text-justify">
                 {feature.description}
               </p>
             </div>
