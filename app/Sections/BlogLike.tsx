@@ -10,14 +10,14 @@ const BlogLike = () => {
         "From fresh produce and quality meats to your favorite snacks and beverages, we stock everything you need for your household.",
     },
     {
-      image: "/grocery-2.jpg",
+      image: "/grocery-2.png",
       title: "Easy Browsing by Category",
       subtitle: "Simply browse by category and select exactly what you need.",
       description:
         "Our organized categories make shopping effortless. Quickly navigate through Meats & Poultry, Frozen Foods, Breakfast items, Snacks, Beverages, and more.",
     },
     {
-      image: "/grocery-3.jpg",
+      image: "/grocery-3.png",
       title: "Convenient Shopping Anywhere",
       subtitle: "Shopping made simple, right from your phone or doorstep.",
       description:
