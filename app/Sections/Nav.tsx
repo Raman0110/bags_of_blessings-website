@@ -1,5 +1,5 @@
 import { Input } from '@/components/ui/input'
-import { SearchIcon } from 'lucide-react'
+import { MenuIcon, SearchIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -13,8 +13,9 @@ const Nav = () => {
         </div>
       </Link>
 
-      <div className="">
+      <div className="flex items-center gap-x-4">
         <SearchIcon className="cursor-pointer hover:text-[#EC1A1C] h-4 w-4 text-muted-foreground" />
+        <MenuIcon className='text-muted-foreground sm:hidden' />
       </div>
 
     </nav>

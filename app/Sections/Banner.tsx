@@ -10,12 +10,13 @@ const Banner = () => {
     <main className=" min-h-[40vh] sm:min-h-[80vh] flex flex-col-reverse lg:flex-row items-center gap-8 justify-start section-padding overflow-hidden ">
 
       <div className="w-full lg:w-[45%] z-20 text-left">
-        <h1 className="font-montserrat font-black text-xl sm:text-3xl lg:text-5xl text-[#EC1A1C] leading-tight">
+        <h1 className="font-montserrat font-black text-xl sm:text-3xl lg:text-5xl text-[#242529] leading-tight">
           Bags Of Blessings
           <br className="hidden lg:block" />
           {" "}Mobile Grocery
         </h1>
-        <p className="sm:text-lg sm:font-semibold text-[#242529] my-4 sm:my-5">
+        <h2 className="mt-2 sm:text-2xl text-[#EC1A1C]">Delivering Blessings 2 U</h2>
+        <p className="sm:text-lg sm:font-semibold text-[#242529] my-2 sm:my-5">
           5-Star Rated on Google – See Why Our Clients Rage & Review Us After Trying Our Fresh Products!
         </p>
         <div className="bg-white flex items-center gap-x-4 p-4 rounded-md max-w-[14rem]">
